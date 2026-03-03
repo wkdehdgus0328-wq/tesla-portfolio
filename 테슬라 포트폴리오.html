@@ -114,8 +114,12 @@
     <section id="intro"
         class="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center border-b border-gray-900">
         <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-            <div class="w-48 h-48 md:w-72 md:h-72 flex-shrink-0 overflow-hidden border border-gray-800 cyber-card">
-                <img src="./assets/프로필사진.jpg" class="w-full h-full object-cover" alt="프로필 사진" />
+            <div
+                class="w-48 h-48 md:w-72 md:h-72 flex-shrink-0 overflow-hidden border border-gray-800 cyber-card rounded-full md:rounded-3xl p-2 bg-gradient-to-br from-gray-800 to-black relative">
+                <div class="absolute inset-0 bg-white/5 rounded-full md:rounded-3xl pointer-events-none"></div>
+                <img src="./assets/프로필사진.jpg"
+                    class="w-full h-full object-cover rounded-full md:rounded-3xl mix-blend-luminosity hover:mix-blend-normal transition duration-500"
+                    alt="프로필 사진" />
             </div>
 
             <div class="flex-1 space-y-6">
@@ -336,15 +340,36 @@
                 <!-- Segment 3: Health G사 -->
                 <div class="cyber-card flex flex-col md:flex-row border border-gray-800 overflow-hidden">
                     <div
-                        class="w-full md:w-1/2 h-80 md:h-auto border-b md:border-b-0 md:border-r border-gray-800 bg-[#111] relative group cursor-pointer overflow-hidden">
+                        class="w-full md:w-1/2 h-80 md:h-auto border-b md:border-b-0 md:border-r border-gray-800 bg-gray-800 grid grid-cols-2 gap-px">
+
+                        <!-- Image 1 -->
                         <div
-                            class="absolute inset-0 bg-tesla-red/10 opacity-0 group-hover:opacity-100 transition duration-300 z-10 pointer-events-none flex items-center justify-center">
-                            <span class="bg-black/80 px-3 py-2 text-xs font-bold text-white rounded tracking-wider">클릭하여
-                                확대</span>
+                            class="relative group cursor-pointer overflow-hidden bg-[#111] flex items-center justify-center">
+                            <div
+                                class="absolute inset-0 bg-tesla-red/10 opacity-0 group-hover:opacity-100 transition duration-300 z-10 pointer-events-none flex items-center justify-center">
+                                <span
+                                    class="bg-black/80 px-2 py-1 text-[10px] md:text-xs font-bold text-white rounded tracking-wider">클릭하여
+                                    확대</span>
+                            </div>
+                            <img src="./assets/img_crm_health_g.jpg.png"
+                                class="w-full h-full object-contain cursor-pointer hover:scale-105 transition duration-300"
+                                alt="Health G사 CRM 모바일 화면 1" />
                         </div>
-                        <img src="./assets/img_crm_health_g.jpg.png"
-                            class="w-full h-full object-contain cursor-pointer hover:scale-105 transition duration-300"
-                            alt="Health G사 CRM 모바일 화면" />
+
+                        <!-- Image 2 -->
+                        <div
+                            class="relative group cursor-pointer overflow-hidden bg-[#111] flex items-center justify-center">
+                            <div
+                                class="absolute inset-0 bg-tesla-red/10 opacity-0 group-hover:opacity-100 transition duration-300 z-10 pointer-events-none flex items-center justify-center">
+                                <span
+                                    class="bg-black/80 px-2 py-1 text-[10px] md:text-xs font-bold text-white rounded tracking-wider">클릭하여
+                                    확대</span>
+                            </div>
+                            <img src="./assets/건기식 g사.png"
+                                class="w-full h-full object-contain cursor-pointer hover:scale-105 transition duration-300"
+                                alt="Health G사 CRM 모바일 화면 2" />
+                        </div>
+
                     </div>
                     <div class="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
                         <h3 class="font-bold text-2xl text-white mb-4">
@@ -421,12 +446,9 @@
                         <h4 class="text-sm font-bold text-gray-300 mb-3 border-l-2 border-tesla-red pl-2">
                             Phase 1. Architecture & Process
                         </h4>
-                        <div class="flex gap-3 h-28">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 h-24">
                             <div
-                                class="w-1/2 h-full border border-gray-800 bg-[#111] relative group cursor-pointer overflow-hidden">
-                                <span
-                                    class="absolute top-1 left-1 bg-black/80 text-white text-[8px] font-inter px-1 z-10">n8n
-                                    Node setup</span>
+                                class="h-full border border-gray-800 bg-[#111] relative group cursor-pointer overflow-hidden">
                                 <div
                                     class="absolute inset-0 bg-tesla-red/20 opacity-0 group-hover:opacity-100 transition z-10 pointer-events-none">
                                 </div>
@@ -435,10 +457,7 @@
                                     alt="PickPilot Process 1" />
                             </div>
                             <div
-                                class="w-1/2 h-full border border-gray-800 bg-[#111] relative group cursor-pointer overflow-hidden">
-                                <span
-                                    class="absolute top-1 left-1 bg-black/80 text-white text-[8px] font-inter px-1 z-10">Architecture
-                                    Logic</span>
+                                class="h-full border border-gray-800 bg-[#111] relative group cursor-pointer overflow-hidden">
                                 <div
                                     class="absolute inset-0 bg-tesla-red/20 opacity-0 group-hover:opacity-100 transition z-10 pointer-events-none">
                                 </div>
@@ -446,20 +465,8 @@
                                     class="w-full h-full object-contain cursor-pointer hover:scale-105 transition duration-300"
                                     alt="PickPilot Process 2" />
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Phase 2: Results -->
-                    <div class="mb-6">
-                        <h4 class="text-sm font-bold text-gray-300 mb-3 border-l-2 border-tesla-red pl-2">
-                            Phase 2. Final Output
-                        </h4>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 h-24">
                             <div
                                 class="h-full border border-gray-800 bg-black relative group cursor-pointer overflow-hidden">
-                                <span
-                                    class="absolute top-1 left-1 bg-black/80 text-white text-[8px] font-inter px-1 z-10">Shorts
-                                    A</span>
                                 <div
                                     class="absolute inset-0 bg-tesla-red/20 opacity-0 group-hover:opacity-100 transition z-10 pointer-events-none">
                                 </div>
@@ -469,8 +476,6 @@
                             </div>
                             <div
                                 class="h-full border border-gray-800 bg-black relative group cursor-pointer overflow-hidden">
-                                <span
-                                    class="absolute top-1 left-1 bg-black/80 text-white text-[8px] font-inter px-1 z-10">Medium</span>
                                 <div
                                     class="absolute inset-0 bg-tesla-red/20 opacity-0 group-hover:opacity-100 transition z-10 pointer-events-none">
                                 </div>
@@ -478,11 +483,17 @@
                                     class="w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-300"
                                     alt="PickPilot Result 2" />
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2: Results -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-bold text-gray-300 mb-3 border-l-2 border-tesla-red pl-2">
+                            Phase 2. Final Output
+                        </h4>
+                        <div class="grid grid-cols-2 gap-2 h-24 md:h-32">
                             <div
                                 class="h-full border border-gray-800 bg-black relative group cursor-pointer overflow-hidden">
-                                <span
-                                    class="absolute top-1 left-1 bg-black/80 text-white text-[8px] font-inter px-1 z-10">Shorts
-                                    B</span>
                                 <div
                                     class="absolute inset-0 bg-tesla-red/20 opacity-0 group-hover:opacity-100 transition z-10 pointer-events-none">
                                 </div>
@@ -492,8 +503,6 @@
                             </div>
                             <div
                                 class="h-full border border-gray-800 bg-black relative group cursor-pointer overflow-hidden">
-                                <span
-                                    class="absolute top-1 left-1 bg-black/80 text-white text-[8px] font-inter px-1 z-10">Showroom</span>
                                 <div
                                     class="absolute inset-0 bg-tesla-red/20 opacity-0 group-hover:opacity-100 transition z-10 pointer-events-none">
                                 </div>
@@ -535,7 +544,7 @@
                         Lead Time 90% Reduced
                     </p>
 
-                    <div class="space-y-6 text-sm text-gray-400 relative z-10">
+                    <div class="space-y-6 text-sm text-gray-400 relative z-10 mb-6">
                         <div>
                             <strong class="text-white block mb-1">LLM 기반 인텐트(Intent) 분석</strong>
                             엑셀로 쏟아지는 방대한 고객 문의 및 불만(VOC) 데이터를 AI
@@ -553,6 +562,34 @@
                                     대면'에만 전력을 다할 수 있는 백오피스 환경</strong>
                                 구축 증명.
                             </p>
+                        </div>
+                    </div>
+
+                    <!-- Image Gallery -->
+                    <div class="mt-auto grid grid-cols-2 gap-3 relative z-10 h-32 md:h-40">
+                        <div
+                            class="h-full border border-gray-800 bg-[#111] relative group cursor-pointer overflow-hidden rounded-sm">
+                            <div
+                                class="absolute inset-0 bg-tesla-red/10 opacity-0 group-hover:opacity-100 transition duration-300 z-10 pointer-events-none flex items-center justify-center">
+                                <span
+                                    class="bg-black/80 px-2 py-1 text-[10px] md:text-xs font-bold text-white rounded tracking-wider">클릭하여
+                                    확대</span>
+                            </div>
+                            <img src="./assets/ai 민원 레퍼런스1.png"
+                                class="w-full h-full object-contain cursor-pointer hover:scale-105 transition duration-300"
+                                alt="VOC AI Reference 1" />
+                        </div>
+                        <div
+                            class="h-full border border-gray-800 bg-[#111] relative group cursor-pointer overflow-hidden rounded-sm">
+                            <div
+                                class="absolute inset-0 bg-tesla-red/10 opacity-0 group-hover:opacity-100 transition duration-300 z-10 pointer-events-none flex items-center justify-center">
+                                <span
+                                    class="bg-black/80 px-2 py-1 text-[10px] md:text-xs font-bold text-white rounded tracking-wider">클릭하여
+                                    확대</span>
+                            </div>
+                            <img src="./assets/ai 민원 레퍼런스2.png"
+                                class="w-full h-full object-contain cursor-pointer hover:scale-105 transition duration-300"
+                                alt="VOC AI Reference 2" />
                         </div>
                     </div>
                 </div>
